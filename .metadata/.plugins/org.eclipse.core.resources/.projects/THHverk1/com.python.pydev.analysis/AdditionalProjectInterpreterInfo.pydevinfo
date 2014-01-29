@@ -1,0 +1,37 @@
+-- VERSION_4
+-- START DISKCACHE
+C:\THH1\THHverk1\.metadata\.plugins\org.eclipse.core.resources\.projects\THHverk1\com.python.pydev.analysis\v2_indexcache
+gui|0|C:\THH1\THHverk1\THHverk1\gui.py
+-- END DISKCACHE
+-- START DICTIONARY
+3
+2=Ui_Dialog
+1=gui
+3=Ui_Dialog.setupUi
+-- END DICTIONARY
+-- START TREE 1
+8
+_en|1|_encoding!11@
+_fr|2|_fromUtf8!11@_fromUtf8!10@
+_tr|1|_translate!10@
+app|0|
+dia|0|
+for|0|
+tab|0|
+ui_|1|Ui_Dialog!9@
+-- END TREE
+-- START TREE 2
+12
+__i|0|
+app|1|app!2&11@
+dia|1|Dialog!2&11@
+dou|3|doubleSpinBox_3!3&11@doubleSpinBox!3&11@doubleSpinBox_2!3&11@
+gri|1|gridLayout!3&11@
+lin|4|lineEdit_4!3&11@lineEdit_2!3&11@lineEdit_3!3&11@lineEdit!3&11@
+ret|1|retranslateUi!2&10@
+set|1|setupUi!2&10@
+sho|0|
+ui|1|ui!2&11@
+ver|2|verticalLayout_2!3&11@verticalLayout!3&11@
+wid|1|widget!3&11@
+-- END TREE

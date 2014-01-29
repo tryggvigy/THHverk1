@@ -1,4 +1,6 @@
-THHverk1
+﻿THHverk1
 ========
 
 Þróun Hugbúnaðar hópverkefni 1
+
+
