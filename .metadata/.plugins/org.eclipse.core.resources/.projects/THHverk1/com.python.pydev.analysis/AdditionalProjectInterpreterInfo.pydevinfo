@@ -2,36 +2,56 @@
 -- START DISKCACHE
 C:\THH1\THHverk1\.metadata\.plugins\org.eclipse.core.resources\.projects\THHverk1\com.python.pydev.analysis\v2_indexcache
 gui|0|C:\THH1\THHverk1\THHverk1\gui.py
+Verdbolga|0|C:\THH1\THHverk1\THHverk1\Verdbolga.py
+main|0|C:\THH1\THHverk1\THHverk1\main.py
 -- END DISKCACHE
 -- START DICTIONARY
-3
-2=Ui_Dialog
+8
+7=Ui_TabWidget.setupUi
 1=gui
-3=Ui_Dialog.setupUi
+5=Inflation
+4=Dialog
+3=Verdbolga
+8=Inflation.__init__
+6=Ui_TabWidget
+2=main
 -- END DICTIONARY
 -- START TREE 1
-8
+14
+!<m|0|
 _en|1|_encoding!11@
 _fr|2|_fromUtf8!11@_fromUtf8!10@
 _tr|1|_translate!10@
-app|0|
-dia|0|
-for|0|
-tab|0|
-ui_|1|Ui_Dialog!9@
+a|0|
+app|1|app!19@
+b|0|
+dia|1|Dialog!17@
+for|1|form!19@
+get|1|getInflationList!26@
+inf|1|Inflation!25@
+lin|0|
+rea|1|readLinesFromTxt!26@
+ui_|1|Ui_TabWidget!9@
 -- END TREE
 -- START TREE 2
-12
-__i|0|
-app|1|app!2&11@
-dia|1|Dialog!2&11@
-dou|3|doubleSpinBox_3!3&11@doubleSpinBox!3&11@doubleSpinBox_2!3&11@
-gri|1|gridLayout!3&11@
-lin|4|lineEdit_4!3&11@lineEdit_2!3&11@lineEdit_3!3&11@lineEdit!3&11@
-ret|1|retranslateUi!2&10@
-set|1|setupUi!2&10@
-sho|0|
-ui|1|ui!2&11@
-ver|2|verticalLayout_2!3&11@verticalLayout!3&11@
-wid|1|widget!3&11@
+19
+__i|2|__init__!4&18@__init__!5&26@
+app|1|app!6&11@
+che|3|checkBox_2!7&11@checkBox!7&11@checkBox_3!7&11@
+com|2|comboBox!7&11@comboBox_2!7&11@
+dat|2|date!8&27@date!5&27@
+dou|6|doubleSpinBox_3!7&11@doubleSpinBox_5!7&11@doubleSpinBox!7&11@doubleSpinBox_4!7&11@doubleSpinBox_2!7&11@doubleSpinBox_6!7&11@
+gra|1|graphicsView!7&11@
+gri|4|gridLayout_2!7&11@gridLayout!7&11@gridLayout_4!7&11@gridLayout_3!7&11@
+lab|4|label_2!7&11@label_3!7&11@label_6!7&11@label!7&11@
+lin|8|lineEdit_7!7&11@lineEdit_4!7&11@lineEdit_8!7&11@lineEdit_2!7&11@lineEdit_3!7&11@lineEdit_6!7&11@lineEdit!7&11@lineEdit_5!7&11@
+pus|2|pushButton!7&11@pushButton_2!7&11@
+ret|1|retranslateUi!6&10@
+set|1|setupUi!6&10@
+sho|1|showMsg!4&18@
+spi|3|spinBox_3!7&11@spinBox_2!7&11@spinBox!7&11@
+tab|4|tab!7&11@TabWidget!6&11@tab1!7&11@tab_2!7&11@
+ui|1|ui!6&11@
+val|2|value!8&27@value!5&27@
+wid|3|widget1!7&11@widget2!7&11@widget!7&11@
 -- END TREE
