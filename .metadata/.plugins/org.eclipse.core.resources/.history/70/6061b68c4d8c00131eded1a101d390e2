@@ -1,0 +1,31 @@
+'''
+Created on 1.2.2014
+
+@author: Tryggvi
+'''
+
+'''
+Þarf fall sem tekur inn, upphæð, mánuði sem á að ávaxta í, vexti, 
+og verðtrygging(verðbólgan plúsast bara við vextina)
+'''
+from Verdbolga import *
+
+def calculate(innborgun, timi, vextir, verdtrygg):
+    avg_inf = avgInflation("1993","2014")
+    years = timi/12
+    
+    if(verdtrygg) :
+        Evt = ((1+vextir)**timi)*((1+avg_inf)**years)*innborgun
+        return Evt
+        
+    else :
+        E = ((1+vextir)**years)*innborgun
+        return E
+    
+calculate(1000,14,3.00,false)
+    
+
+    
+
+
+

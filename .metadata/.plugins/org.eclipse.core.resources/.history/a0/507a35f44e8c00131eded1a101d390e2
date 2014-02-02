@@ -1,0 +1,25 @@
+'''
+Created on 1.2.2014
+
+@author: Tryggvi
+'''
+from Verdbolga import *
+
+def calculate(innborgun, timi, vextir, verdtrygg):
+    avg_inf = avgInflation("1993","2014")
+    
+    years = timi/12
+    rVextir = vextir/100
+    rAvg_inf = avg_inf/100
+    
+    if(verdtrygg) :
+        Evt = ((1+rVextir)**years)*((1+rAvg_inf)**years)*innborgun
+        return Evt
+        
+    else :
+        E = ((1+rVextir)**years)*innborgun
+        return E
+    
+print(calculate(1000,14,3.00,False))
+print(calculate(1000,12,0.00,True))
+

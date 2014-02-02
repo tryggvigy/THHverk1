@@ -1,0 +1,24 @@
+'''
+Created on 1.2.2014
+
+@author: Tryggvi
+'''
+from Verdbolga import *
+
+def calculate(innborgun, timi, vextir, verdtrygg):
+    avg_inf = avgInflation("1993","2014")
+    
+    rVextir = vextir/100*12     #vextir i brotabroti a manudi.
+    rAvg_inf = avg_inf/100*12   #verdbolga i brotabroti a manudi.
+    
+    if(verdtrygg) :
+        Evt = ((1+rVextir)**timi)*((1+rAvg_inf)**timi)*innborgun
+        return Evt
+        
+    else :
+        E = ((1+rVextir)**timi)*innborgun
+        return E
+    
+print(calculate(1000,14,3.00,False))
+#print(calculate(1000,12,0.00,True))
+

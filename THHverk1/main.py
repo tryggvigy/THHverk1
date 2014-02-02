@@ -3,7 +3,7 @@ import sys
 from PyQt4.QtCore import *
 from PyQt4.QtGui import * 
 
-import gui #notenda umhverfið
+import gui #notenda umhverfi
 import numpy as np
 
 class Dialog(QTabWidget, gui.Ui_TabWidget):
