@@ -1,0 +1,12 @@
+INSTUPVerdbolga
+C:\Users\Notandi\Documents\GitHub\THHverk1\THHverk1\Verdbolga.py
+INFOS:&&1|1|2|0&&3|3|2|1&&3|4|2|1&&2|5|2|1&&3|3|2|6&&3|4|2|6&&2|7|2|0&&2|8|2|0&&2|9|2|0
+getInflationList=8
+__init__=5
+value=4
+Inflation=1
+date=3
+Verdbolga=2
+Inflation.__init__=6
+avgInflation=9
+readLinesFromTxt=7
