@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabWidget</class>
+ <widget class="QTabWidget" name="TabWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>590</width>
+    <height>436</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TabWidget</string>
+  </property>
+  <property name="currentIndex">
+   <number>0</number>
+  </property>
+  <widget class="QWidget" name="tab">
+   <attribute name="title">
+    <string>Lán</string>
+   </attribute>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>133</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Sláðu inn greiðslu.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>110</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Reikna</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>20</y>
+      <width>74</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verðtryggt</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_2">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>50</y>
+      <width>70</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verðtryggt</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_3">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>70</y>
+      <width>70</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Verðtryggt</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>280</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="2">
+      <widget class="QComboBox" name="comboBox_2">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>2014</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2013</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2012</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2011</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2010</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2009</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2008</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2007</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2006</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2005</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2004</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2003</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2002</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1999</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1998</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1997</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1996</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1995</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1994</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1993</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1992</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1991</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1990</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Tímabil meðalverðbólgu: </string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="comboBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <property name="currentText">
+        <string>2014</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>2014</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2013</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2012</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2011</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2010</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2009</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2008</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2007</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2006</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2005</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2004</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2003</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2002</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2001</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2000</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1999</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1998</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1997</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1996</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1995</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1994</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1993</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1992</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1991</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>1990</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>151</x>
+      <y>2</y>
+      <width>194</width>
+      <height>93</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Vextir</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="inputMask">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>Sláðu inn lánaupphæð.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QDoubleSpinBox" name="doubleSpinBox">
+       <property name="wrapping">
+        <bool>false</bool>
+       </property>
+       <property name="buttonSymbols">
+        <enum>QAbstractSpinBox::UpDownArrows</enum>
+       </property>
+       <property name="singleStep">
+        <double>1.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="placeholderText">
+        <string>Sláðu inn lánaupphæð.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="placeholderText">
+        <string>Sláðu inn lánaupphæð.</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="tab_2">
+   <attribute name="title">
+    <string>Niðurstaða</string>
+   </attribute>
+   <widget class="QPlainTextEdit" name="plainTextEdit">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>10</y>
+      <width>531</width>
+      <height>361</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string>Hér birtist niðurstaðan þín.</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

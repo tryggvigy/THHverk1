@@ -4,6 +4,7 @@ Created on 1.2.2014
 @author: Tryggvi
 '''
 from Verdbolga import *
+import Plotting
 
 '''
 Notkun: calculate(a,b,c,d)
@@ -37,14 +38,20 @@ def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
     
     if(verdtrygg) :
         currVal = innistaeda
+        y = [0] * (timi) 
         for i in range(0,timi) : 
             currVal = currVal*(1+rVextir)*(1+rAvg_inf) + innborgun
+            y[i] = currVal
+        Plotting.plot(y,timi)
         return currVal
         
     else :
         currVal = innistaeda
+        y = [0] * (timi) 
         for i in range(0,timi) : 
             currVal = currVal*(1+rVextir) + innborgun
+            y[i] = currVal
+        Plotting.plot(y,timi)
         return currVal
     
 
@@ -54,3 +61,4 @@ print(onePayment(0,1000,14,3.00,False))
 print(onePayment(0,1000,14,3.00,True))
 print(monthlyPayment(1000000, 10000, 36, 1.5, True))
 '''
+#monthlyPayment(1000000, 10000, 36, 1.5, True)
