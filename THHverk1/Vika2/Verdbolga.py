@@ -57,11 +57,9 @@ def avgInflation(start, end):
     for i in range (sindex,eindex+1) : 
         summa += l_inflations[i].value
         count += 1
-    
-    if(count == 0): return summa
-    else:    #TO-DO
-        avgInfl = summa/count #medaltal = summa/fjolda
-        return avgInfl
+        
+    avgInfl = summa/count #medaltal = summa/fjolda
+    return avgInfl
         
         
 

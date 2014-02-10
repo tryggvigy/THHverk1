@@ -5,7 +5,6 @@ Created on 1.2.2014
 '''
 from Verdbolga import *
 import Plotting
-doPlot = False
 
 '''
 Notkun: calculate(a,b,c,d)
@@ -27,8 +26,7 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         for i in range(0,timi) : 
             currVal = currVal*(1+rVextir)*(1+rAvg_inf)
             y[i] = currVal
-        if doPlot :
-            Plotting.plot(y,timi)
+        Plotting.plot(y,timi)
         return currVal
         
     else :
@@ -37,8 +35,7 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         for i in range(0,timi) : 
             currVal = currVal*(1+rVextir)
             y[i] = currVal
-        if doPlot:
-            Plotting.plot(y,timi)
+        Plotting.plot(y,timi)
         return currVal
 
 
@@ -55,7 +52,7 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
   '''
   
 def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
-    avg_inf = avgInflation("1990","2014") 
+    avg_inf = avgInflation("1990","2014") #TO-DO lata vera global var sem er buid til utfra gui fields.
     rVextir = vextir/(100*12)     
     rAvg_inf = avg_inf/(100*12)   
     
@@ -63,22 +60,20 @@ def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         currVal = innistaeda
         y = [0] * (timi) 
         for i in range(0,timi) : 
-            y[i] = currVal
             currVal = currVal*(1+rVextir)*(1+rAvg_inf) + innborgun
-        if doPlot:
-            Plotting.plot(y,timi)
+            y[i] = currVal
+        Plotting.plot(y,timi)
         return currVal
         
     else :
         currVal = innistaeda
         y = [0] * (timi) 
         for i in range(0,timi) : 
-            y[i] = currVal
             currVal = currVal*(1+rVextir) + innborgun
-        if doPlot:
-            Plotting.plot(y,timi)
+            y[i] = currVal
+        Plotting.plot(y,timi)
         return currVal
-
+    
 
 #prufa
 '''  
