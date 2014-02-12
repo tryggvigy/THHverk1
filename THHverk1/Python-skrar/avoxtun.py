@@ -40,19 +40,6 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
  #       if Plotting.g_doPlot:
  #           Plotting.plot(y,timi)
         return currVal
-
-
-'''    
-    if(verdtrygg) :
-        #rakningarformula f. verdbaettan reikning
-        Evt = ((1+rVextir)**timi)*((1+rAvg_inf)**timi)*total #** er veldis-virkinn i Python.
-        return Evt
-        
-    else :
-        #rakningarformula f. overdtryggdan reikning
-        E = ((1+rVextir)**timi)*total
-        return E
-  '''
   
 def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
     avg_inf = avgInflation("1990","2014") 

@@ -3,7 +3,7 @@ from lanUtreikn import *
 from hveLengi import *
 
 def main():                   
-    for i in range(0,3) :
+    for i in range(0,15) :
         a = 5000 * (i*3)
         b = 100 * i
         c = 12 * i

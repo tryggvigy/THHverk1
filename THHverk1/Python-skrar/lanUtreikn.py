@@ -6,7 +6,7 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
     rVextir = vextir/(100*12)     
     rAvg_inf = avg_inf/(100*12)   
     currVal=[]
-    now = 1337
+    now = 1337 #eitthvad annad en 0 eda None.
     if(verdtrygg) :
         currVal.append(eftirstodvar)
         for i in range(0,timi) :
@@ -31,9 +31,3 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
        # if Plotting.g_doPlot:
         #    Plotting.plotNafn(timi,currVal,'Manudir','Eftirstodvar')
         return currVal
-<<<<<<< HEAD
-    
-#print(lanUtreikn(12,1,12,0,False))
-=======
-#print(lanUtreikn(1000,100,10,5,True))
->>>>>>> 34b274cd1ea8e7cab0254d61d4c7058ed1109d8c
