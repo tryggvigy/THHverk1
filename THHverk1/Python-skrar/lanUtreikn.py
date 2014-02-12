@@ -1,5 +1,5 @@
 from Verdbolga import *
-from Plotting import * 
+import Plotting 
 #TODO: baeta vid landstima?  oll lan verdur ad borga upp eftir akvedinn tima.
 def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
     avg_inf = avgInflation("1990","2014")
@@ -15,6 +15,8 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
                 return currVal
             now = currVal[i]*(1+rVextir)*(1+rAvg_inf) - innborgun
             currVal.append( now )
+        if Plotting.g_doPlot:
+            Plotting.plotNafn(timi,currVal,'Manudir','Eftirstodvar')
         return currVal
         
     else :
@@ -26,6 +28,12 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
                 return currVal 
             now = currVal[i]*(1+rVextir) - innborgun
             currVal.append( now )
+        if Plotting.g_doPlot:
+            Plotting.plotNafn(timi,currVal,'Manudir','Eftirstodvar')
         return currVal
+<<<<<<< HEAD
     
 #print(lanUtreikn(12,1,12,0,False))
+=======
+#print(lanUtreikn(1000,100,10,5,True))
+>>>>>>> 34b274cd1ea8e7cab0254d61d4c7058ed1109d8c

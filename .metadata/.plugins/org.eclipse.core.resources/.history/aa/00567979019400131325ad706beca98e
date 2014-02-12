@@ -1,0 +1,32 @@
+'''
+Created on 12.2.2014
+
+@author: Notandi
+'''
+from Verdbolga import *
+import Plotting
+
+def monthlyDebt(eftirstodvar,innborgun,vextir,verdtryggt):
+    avg_inf = avgInflation("2014","2014")
+    rVextir = vextir/(100*12)     
+    rAvg_inf = avg_inf/(100*12)   
+    currStatus = eftirstodvar
+    monthCount = 0
+    plotY = []
+    if(verdtryggt) :
+        while currStatus > 0 :
+            plotY.append(currStatus)
+            currStatus = currStatus*(1+rVextir)*(1+rAvg_inf) - innborgun
+            monthCount +=1
+        plotY.append(currStatus)
+        Plotting.plot(plotY,monthCount+1)
+        return monthCount
+    else:
+        while currStatus > 0:
+            currStatus = currStatus*(1+rVextir) - innborgun
+            monthCount +=1
+        return monthCount
+print(monthlyDebt(1000,100,5,True))
+        
+        
+        
