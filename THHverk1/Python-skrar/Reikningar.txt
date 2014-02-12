@@ -1,3 +1,0 @@
-//Innistæða;vextir;verðtrygging;
-1000;3.00;False
-1000;3.00;True
