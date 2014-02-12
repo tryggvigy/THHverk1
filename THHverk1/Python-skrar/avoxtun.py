@@ -4,7 +4,7 @@ Created on 1.2.2014
 @author: Tryggvi
 '''
 from Verdbolga import *
-import Plotting
+#import Plotting
 
 
 '''
@@ -27,8 +27,8 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         for i in range(0,timi) : 
             currVal = currVal*(1+rVextir)*(1+rAvg_inf)
             y[i] = currVal
-        if Plotting.g_doPlot :
-            Plotting.plot(y,timi)
+ #       if Plotting.g_doPlot :
+ #           Plotting.plot(y,timi)
         return currVal
         
     else :
@@ -37,8 +37,8 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         for i in range(0,timi) : 
             currVal = currVal*(1+rVextir)
             y[i] = currVal
-        if Plotting.g_doPlot:
-            Plotting.plot(y,timi)
+ #       if Plotting.g_doPlot:
+ #           Plotting.plot(y,timi)
         return currVal
 
 
@@ -65,8 +65,8 @@ def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         for i in range(0,timi) : 
             y[i] = currVal
             currVal = currVal*(1+rVextir)*(1+rAvg_inf) + innborgun
-        if g_doPlot:
-            Plotting.plot(y,timi)
+ #       if g_doPlot:
+ #           Plotting.plot(y,timi)
         return currVal
         
     else :
@@ -75,8 +75,8 @@ def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
         for i in range(0,timi) : 
             y[i] = currVal
             currVal = currVal*(1+rVextir) + innborgun
-        if g_doPlot:
-            Plotting.plot(y,timi)
+ #       if g_doPlot:
+ #           Plotting.plot(y,timi)
         return currVal
 
 
