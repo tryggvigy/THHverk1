@@ -27,3 +27,5 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
             now = currVal[i]*(1+rVextir) - innborgun
             currVal.append( now )
         return currVal
+    
+#print(lanUtreikn(12,1,12,0,False))
