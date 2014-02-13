@@ -34,3 +34,11 @@ def main():
         print(monthlyDebt(a,b,c,e))
         
 main()
+
+''' 
+a=float(raw_input('Innistaeda (double): '))
+b=int(raw_input('timi i fjolda manada(int): '))
+c=float(raw_input('vextir i prosentu(double): '))
+d=bool(raw_input('Verdtrygging(bool): '))
+print(onePayment(a,1000,b,c,d))
+'''

@@ -8,8 +8,8 @@ from Verdbolga import *
 
 
 '''
-Notkun: calculate(a,b,c,d)
-Fyrir: innborgun er tala, timi er fjoldi manada sem a ad spara i (integer),
+Notkun: onePayment(a,b,c,d)
+Fyrir: innistaeda er float, innborgun er tala, timi er fjoldi manada sem a ad spara i (integer),
         vextir eru prosenta eins og t.d 3.24, verdtrygg er boolean breyta.
 Eftir: fallid skilar heildarupphaed a reikning eftir timan(skrefin) timi.
         s.s thetta fall segir ther um hvad mikid upphaed sem thu leggur inna reikning mun vaxa.
@@ -29,7 +29,7 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
             y[i] = currVal
  #       if Plotting.g_doPlot :
  #           Plotting.plot(y,timi)
-        return currVal
+        return y
         
     else :
         currVal = total
@@ -39,7 +39,7 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
             y[i] = currVal
  #       if Plotting.g_doPlot:
  #           Plotting.plot(y,timi)
-        return currVal
+        return y
   
 def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
     avg_inf = avgInflation("1990","2014") 
@@ -54,7 +54,7 @@ def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
             currVal = currVal*(1+rVextir)*(1+rAvg_inf) + innborgun
  #       if g_doPlot:
  #           Plotting.plot(y,timi)
-        return currVal
+        return y
         
     else :
         currVal = innistaeda
@@ -64,11 +64,11 @@ def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
             currVal = currVal*(1+rVextir) + innborgun
  #       if g_doPlot:
  #           Plotting.plot(y,timi)
-        return currVal
+        return y
 
 
 #prufa
-'''  
+''' 
 print(onePayment(0,1000,14,3.00,False))
 print(onePayment(0,1000,14,3.00,True))
 print(monthlyPayment(1000000, 10000, 36, 1.5, True))
