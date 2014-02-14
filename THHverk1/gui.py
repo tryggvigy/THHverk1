@@ -447,7 +447,7 @@ class Ui_TabWidget(object):
         self.comboBox_2.setItemText(22, _translate("TabWidget", "1992", None))
         self.comboBox_2.setItemText(23, _translate("TabWidget", "1991", None))
         self.comboBox_2.setItemText(24, _translate("TabWidget", "1990", None))
-        #self.comboBox.setCurrentText(_translate("TabWidget", "2014", None))
+        self.comboBox.setCurrentText(_translate("TabWidget", "2014", None))
         self.comboBox.setItemText(0, _translate("TabWidget", "2014", None))
         self.comboBox.setItemText(1, _translate("TabWidget", "2013", None))
         self.comboBox.setItemText(2, _translate("TabWidget", "2012", None))

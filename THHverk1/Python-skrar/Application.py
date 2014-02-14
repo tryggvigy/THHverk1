@@ -23,6 +23,8 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):     #self er Dialog
         self.initUI()
         
     def initUI(self):
+        self.setWindowTitle("MainWindow")
+        
         '''INFLATION COMBO BOXES'''
         cB = self.comboBox.currentIndexChanged[int]
         cB.connect(self.setInfl)
@@ -30,11 +32,12 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):     #self er Dialog
         cB2.connect(self.setInfl)
         
         '''REIKNA BUTTON'''
-        pb = self.pushButton.clicked
-        pb.connect(self.initCalc)
-       
+        pbClick = self.pushButton.clicked
+        pbClick.connect(self.initCalc)
+        
         self.setInfl()
         
+    
     def initCalc(self):
         #reset comparer, maybe user changed loans.
         Compare.g_comparer = []
@@ -50,6 +53,8 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):     #self er Dialog
         self.addAccounts()
         best = Compare.findBestIn(Compare.g_comparer)
         self.setResults(best)
+        #change to result tab
+        self.setCurrentIndex(1)
 
         
     def addLoans(self):
@@ -104,6 +109,7 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):     #self er Dialog
         self.tab_2.setFocus()
         self.tab_2.activateWindow()
         self.tab_2.raise_()
+        
        
     def setInfl(self):
         syear = str(self.comboBox.currentText())
