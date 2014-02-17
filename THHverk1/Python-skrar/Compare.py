@@ -1,8 +1,11 @@
+# -*- coding: utf-8 -*-
 '''
 Created on 12.2.2014
 
 @author: Lenovo
 '''
+import PyQt4.QtGui
+import Application
 g_comparer = [] 
 
 class Entity :
@@ -15,15 +18,14 @@ class Entity :
         self.data = data
         self. isLoan = isLoan
 
-#sma bilad
 def findBestIn(myList):
-    bestLoan = Entity("dummyLoan1",myList,True)
+    bestLoan = None
     bestLoanDelta = 0
     '''
     secondLoan = Entity("dummyLoan2",myList,True)
     secondLoanDelta = 0 
     '''
-    bestAccount = Entity("dummyAccount",myList,False)
+    bestAccount = None
     bestAccountDelta = 0
     for i in range(0,len(myList)) :
         last = myList[i].data[-1] 
@@ -59,10 +61,16 @@ def findBestIn(myList):
     
     if(max(bestLoanDelta,bestAccountDelta) == bestLoanDelta) : return bestLoan
     else : return bestAccount
+
+
+    
+    
+    
+    
+    
   
   
-  
-    ''' 
+    '''
     print(bestLoan.name)
     print(bestLoanDelta)
     #print(secondLoan.name)

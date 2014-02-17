@@ -5,7 +5,7 @@ Created on 5.2.2014
 '''
 import matplotlib.pyplot as plt
 import numpy as np
-g_doPlot = True
+g_doPlot = False
 
 def plot(y, timi):
     x = np.arange(0,timi,1)

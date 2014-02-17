@@ -3,8 +3,8 @@ Created on 12.2.2014
 
 @author: Notandi
 '''
-from Verdbolga import *
-#import Plotting
+from Verdbolga import avgInflation
+import Plotting
 
 def monthlyDebt(eftirstodvar,innborgun,vextir,verdtryggt):
     avg_inf = avgInflation("2014","2014")
@@ -15,21 +15,21 @@ def monthlyDebt(eftirstodvar,innborgun,vextir,verdtryggt):
     plotY = []
     if(verdtryggt) :
         while currStatus > 0 :
-#            plotY.append(currStatus)
+            plotY.append(currStatus)
             currStatus = currStatus*(1+rVextir)*(1+rAvg_inf) - innborgun
             monthCount +=1
-#        plotY.append(currStatus)
-#        if Plotting.g_doPlot:
-#            Plotting.plotNafn(monthCount,plotY,'Manudir','Eftirstodvar')
+        plotY.append(currStatus)
+        if Plotting.g_doPlot:
+            Plotting.plotNafn(monthCount,plotY,'Manudir','Eftirstodvar')
         return monthCount
     else:
         while currStatus > 0:
-#            plotY.append(currStatus)
+            plotY.append(currStatus)
             currStatus = currStatus*(1+rVextir) - innborgun
             monthCount +=1
-#        plotY.append(currStatus)
-#        if g_doPlot:
-#            Plotting.plotNafn(monthCount,plotY,'Manudir','Eftirstodvar')
+        plotY.append(currStatus)
+        if Plotting.g_doPlot:
+            Plotting.plotNafn(monthCount,plotY,'Manudir','Eftirstodvar')
         return monthCount
 #print(monthlyDebt(1000,100,5,True))
         
