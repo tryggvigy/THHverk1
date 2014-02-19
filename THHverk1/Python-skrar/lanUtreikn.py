@@ -15,8 +15,6 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
                 return currVal
             now = currVal[i]*(1+rVextir)*(1+rAvg_inf) - innborgun
             currVal.append( now )
-        if Plotting.g_doPlot:
-            Plotting.plotNafn(timi,currVal,'Manudir','Eftirstodvar')
         return currVal
         
     else :
@@ -28,6 +26,4 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
                 return currVal 
             now = currVal[i]*(1+rVextir) - innborgun
             currVal.append( now )
-        if Plotting.g_doPlot:
-            Plotting.plotNafn(timi,currVal,'Manudir','Eftirstodvar')
         return currVal

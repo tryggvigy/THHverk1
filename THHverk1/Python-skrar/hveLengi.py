@@ -31,7 +31,6 @@ def monthlyDebt(eftirstodvar,innborgun,vextir,verdtryggt):
         if Plotting.g_doPlot:
             Plotting.plotNafn(monthCount,plotY,'Manudir','Eftirstodvar')
         return monthCount
-#print(monthlyDebt(1000,100,5,True))
         
         
         

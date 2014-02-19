@@ -1,6 +1,6 @@
-from avoxtun import *
-from lanUtreikn import *
-from hveLengi import *
+from avoxtun import onePayment, monthlyPayment
+from lanUtreikn import lanUtreikn
+from hveLengi import monthlyDebt
 
 def main():                   
     for i in range(0,15) :
