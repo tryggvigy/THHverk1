@@ -33,7 +33,6 @@ def findBestIn(myList):
         last = myList[i].data[-1] 
         first = myList[i].data[0]
         delta = last - first
-        print(myList[0].isLoan)
         if(myList[i].isLoan == True):
             #i byrjun er lanid sem kemur inn fyrst best.
             if(i == 0) : 

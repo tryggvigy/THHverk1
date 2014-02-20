@@ -128,12 +128,11 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
             firstPayment = best.data[0]
             total_pay = g_payment
             if months != 0 : total_pay *= months
-            txt = "Best væri að borga inn á efirfarandi lán:  %s" % best.name
-            txt += "\ní upphafi var höfuðstóll lánsins %d kr." % firstPayment
-            txt = txt + "\nEftir %d mánuði af %d kr. greiðslum verður staða lánsins orðin %d kr." % (months, g_payment, lastPayment)
-            txt += "\nÞú hefur þá alls greitt %d kr. inn á %s og mismunurinn er %d." % (total_pay, best.name, lastPayment-firstPayment)
-            utf8_txt = txt.decode("utf-8")
-            self.plainTextEdit.setPlainText(utf8_txt)
+            txt = u"Best væri að borga inn á efirfarandi lán:  %s" % best.name
+            txt += u"\ní upphafi var höfuðstóll lánsins %d kr." % firstPayment
+            txt = txt + u"\nEftir %d mánuði af %d kr. greiðslum verður staða lánsins orðin %d kr." % (months, g_payment, lastPayment)
+            txt += u"\nÞú hefur þá alls greitt %d kr. inn á %s og mismunurinn er %d." % (total_pay, best.name, lastPayment-firstPayment)
+            self.plainTextEdit.setPlainText(txt)
             
         else :
             months = len(best.data)-1
@@ -141,12 +140,11 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
             firstPayment = best.data[0]
             total_pay = g_payment
             if months != 0 : total_pay *= months
-            txt = "Best væri að borga inn á efirfarandi reikning:  %s" % best.name
-            txt += "\ní upphafi var höfuðstóll reiknings %d kr." % firstPayment
-            txt = txt + "\nEftir %d mánuði af %d kr. innborgunum verður staða lánsins orðin %d kr." % (months, g_payment, lastPayment)
-            txt += "\nÞú hefur þá alls lagt inn %d kr. á %s og mismunurinn er %d." % (total_pay,best.name, lastPayment-firstPayment)
-            utf8_txt = txt.decode("utf-8")
-            self.plainTextEdit.setPlainText(utf8_txt)
+            txt = u"Best væri að borga inn á efirfarandi reikning:  %s" % best.name
+            txt += u"\ní upphafi var höfuðstóll reiknings %d kr." % firstPayment
+            txt = txt + u"\nEftir %d mánuði af %d kr. innborgunum verður staða lánsins orðin %d kr." % (months, g_payment, lastPayment)
+            txt += u"\nÞú hefur þá alls lagt inn %d kr. á %s og mismunurinn er %d." % (total_pay,best.name, lastPayment-firstPayment)
+            self.plainTextEdit.setPlainText(txt)
             
         #change to result tab
         self.setCurrentIndex(1)
