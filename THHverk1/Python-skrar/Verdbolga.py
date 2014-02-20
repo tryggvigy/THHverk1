@@ -19,8 +19,6 @@ def readLinesFromTxt(path):
     return data;
 
 def getInflationList():
-    #l_dates = readLinesFromTxt("C://verdbolga_timabil.txt")
-    #l_values = readLinesFromTxt("C://verdbolga_tala.txt")
     l_dates = readLinesFromTxt("verdbolga_timabil.txt")
     l_values = readLinesFromTxt("verdbolga_tala.txt")
     l_inflations = list()
@@ -59,18 +57,8 @@ def avgInflation(start, end):
         count += 1
     
     if(count == 0): return summa
-    else:    #TO-DO
+    else:    
         avgInfl = summa/count #medaltal = summa/fjolda
         return avgInfl
-        
-        
 
-
-'''prufa:
-#print(avgInflation("1990", "1990"))
-#print(getInflationList()[0].date)
-'''
-
-        
-        
     

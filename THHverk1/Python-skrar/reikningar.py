@@ -26,7 +26,6 @@ def getDB() :
     c = conn.cursor()
     reikningar = []
     for row in c.execute('SELECT * FROM Reikningar ORDER BY Nafn'):
-        #print row
         reikningar.append(row)
         
     return reikningar
@@ -38,12 +37,6 @@ def getReikn():
         reikningar.append(Reikningur(tuples[i][0],tuples[i][1],tuples[i][2],tuples[i][3],tuples[i][4]))
     return reikningar
 
-
-'''PRUFA
-a = getReikn()
-c =avoxtun.monthlyPayment(a[0].innistaeda, 1000, 12, a[0].vextir, a[0].verdtrygg)
-print(c)
-'''
         
         
         

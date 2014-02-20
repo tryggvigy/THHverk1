@@ -35,7 +35,7 @@ def onePayment(innistaeda, innborgun, timi, vextir, verdtrygg):
   
 def monthlyPayment(innistaeda, innborgun, timi, vextir, verdtrygg):
     avg_inf = avgInflation("1990","2014")
-    total = innborgun+innistaeda 
+    total = innistaeda
     rVextir = vextir/(100*12)     
     rAvg_inf = avg_inf/(100*12)  
     y = [] 

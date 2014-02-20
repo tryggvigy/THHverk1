@@ -1,5 +1,5 @@
 from Verdbolga import avgInflation
-import Plotting 
+
 
 def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
     avg_inf = avgInflation("1990","2014")
@@ -11,7 +11,7 @@ def lanUtreikn(eftirstodvar, innborgun, timi, vextir, verdtrygg):
         currVal.append(eftirstodvar)
         for i in range(0,timi) :
             if now <= 0 : 
-                print("done") 
+                print("Loan payed up at index %d" % i) 
                 return currVal
             now = currVal[i]*(1+rVextir)*(1+rAvg_inf) - innborgun
             currVal.append( now )

@@ -1,6 +1,5 @@
 from avoxtun import onePayment, monthlyPayment
 from lanUtreikn import lanUtreikn
-from hveLengi import monthlyDebt
 
 def main():                   
     for i in range(0,15) :
@@ -29,16 +28,6 @@ def main():
         print('')
         print('Throun lans:')
         print(lanUtreikn(a,b,c,d,e))
-        print('')
-        print('Timi lans:')
-        print(monthlyDebt(a,b,c,e))
+
         
 main()
-
-''' 
-a=float(raw_input('Innistaeda (double): '))
-b=int(raw_input('timi i fjolda manada(int): '))
-c=float(raw_input('vextir i prosentu(double): '))
-d=bool(raw_input('Verdtrygging(bool): '))
-print(onePayment(a,1000,b,c,d))
-'''

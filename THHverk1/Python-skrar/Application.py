@@ -5,7 +5,7 @@ Created on 13.2.2014
 @author: Lenovo
 '''
 import gui, PyQt4.QtGui
-import Compare, reikningar, avoxtun, Plotting
+import Compare, reikningar, avoxtun
 from lanUtreikn import lanUtreikn
 from Verdbolga import avgInflation
 import matplotlib.pyplot as plt
@@ -23,7 +23,7 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
         self.initUI()
         
     def initUI(self):
-        self.setWindowTitle("MainWindow")
+        self.setWindowTitle(u"Velkomin í forritið Skattaskjól! Fylltu inn greiðslu til að byrja.")
         
         '''INFLATION COMBO BOXES'''
         cB = self.comboBox.currentIndexChanged[int]
@@ -54,6 +54,7 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
             g_payment = float(self.lineEdit_4.text()) 
         else : self.displayError()
         
+        ### MAIN CHAIN OF FUNCTIONALITY
         self.addLoans()
         self.addAccounts()
         best = Compare.findBestIn(Compare.g_comparer)
@@ -72,7 +73,6 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
             loan1Funds = float(self.lineEdit.text())
             loan1Data = lanUtreikn(loan1Funds, g_payment, loan1Time, loan1Interest, loan1Indexed)
             loan1ZeroData = lanUtreikn(loan1Funds, 0, loan1Time, loan1Interest, loan1Indexed) #FYRIR SAMANBURDARFALLID
-            
             #Hendi hlutnum Entity inn i g_comparer
             Compare.g_comparer.append(Compare.Entity(loan1Name, loan1Data, loan1ZeroData, True))
         else : pass
@@ -105,7 +105,7 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
       
        
     def addAccounts(self):
-        time = 1+self.comboBox_6.currentIndex() #er 0 ?
+        time = 1+self.comboBox_6.currentIndex() 
         acc = reikningar.getReikn()
         for i in range(0,len(acc)) :
             data = []
@@ -143,7 +143,7 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
             txt = u"Best væri að borga inn á efirfarandi reikning:  %s" % best.name
             txt += u"\ní upphafi var höfuðstóll reiknings %d kr." % firstPayment
             txt = txt + u"\nEftir %d mánuði af %d kr. innborgunum verður staða lánsins orðin %d kr." % (months, g_payment, lastPayment)
-            txt += u"\nÞú hefur þá alls lagt inn %d kr. á %s og mismunurinn er %d." % (total_pay,best.name, lastPayment-firstPayment)
+            txt += u"\nÞú hefur þá alls lagt inn %d kr. á %s og mismunurinn er %d kr." % (total_pay,best.name, lastPayment-firstPayment)
             self.plainTextEdit.setPlainText(txt)
             
         #change to result tab
@@ -151,12 +151,12 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
         
         xaxis = np.arange(0,len(best.data),1)
         plt.plot(xaxis, best.data, label = best.name)
-        plt.plot(xaxis, best.zeroData, label = best.name + " Ef ekkert borgad.")
+        plt.plot(xaxis, best.zeroData, label = best.name + u" ef ekkert er gert")
         plt.xlabel(unicode("mánuðir", "utf-8"))
         plt.ylabel("kr.")
         plt.legend()
         plt.show()
-        #Plotting.showPLot(bestPlot)
+
         
 
         
@@ -169,7 +169,7 @@ class Dialog(PyQt4.QtGui.QTabWidget, gui.Ui_TabWidget):
     def displayError(self) :
         errormsg = PyQt4.QtGui.QErrorMessage(self)
         errormsg.setWindowTitle("Error")
-        errormsg.showMessage("Greiðslur reiturinn verður að vera tala stærri eða jöfn núll.".decode('utf-8'))
+        errormsg.showMessage(u"Greiðslur reiturinn verður að vera tala stærri eða jöfn núll.")
         
         
         
